@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dependency-free materials engineering calculators for stress tensors and X-ray diffraction.">
+  <title>Material Calculators</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f8fafc; --card:#fff; --text:#172033; --muted:#53627a; --line:#d8e0eb; --blue:#2563eb; --violet:#7c3aed; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0f172a; --card:#172033; --text:#edf2ff; --muted:#b8c3d6; --line:#334155; } }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--text); background:var(--bg); }
+    main { max-width:920px; padding:72px 24px; margin:auto; }
+    .eyebrow { margin:0 0 12px; color:var(--blue); font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:.78rem; }
+    h1 { margin:0; font-size:clamp(2.3rem,6vw,4.4rem); line-height:1.04; letter-spacing:-.04em; }
+    .lead { max-width:690px; margin:20px 0 42px; color:var(--muted); font-size:1.18rem; }
+    .tools { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); }
+    a.tool { display:block; min-height:220px; padding:28px; border:1px solid var(--line); border-radius:16px; text-decoration:none; color:inherit; background:var(--card); box-shadow:0 8px 24px rgb(15 23 42 / .06); transition:transform .18s, box-shadow .18s, border-color .18s; }
+    a.tool:hover { transform:translateY(-4px); border-color:var(--blue); box-shadow:0 16px 34px rgb(15 23 42 / .15); }
+    .badge { display:inline-block; padding:4px 10px; border-radius:999px; color:#fff; background:var(--blue); font-size:.78rem; font-weight:700; }
+    .violet .badge { background:var(--violet); }
+    h2 { margin:20px 0 8px; font-size:1.4rem; letter-spacing:-.02em; }
+    .tool p { margin:0; color:var(--muted); }
+    .open { display:block; margin-top:24px; color:var(--blue); font-weight:700; }
+    footer { margin-top:50px; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Materials engineering tools</p>
+    <h1>Clear calculations.<br>Zero dependencies.</h1>
+    <p class="lead">Small, inspectable browser tools for stress-tensor transformations and cubic X-ray diffraction analysis. Your input stays in your browser.</p>
+    <section class="tools" aria-label="Calculators">
+      <a class="tool" href="StressTensorCalculator.html">
+        <span class="badge">Mechanics</span>
+        <h2>Stress Tensor Transformation</h2>
+        <p>Transform a 3×3 stress tensor, inspect invariants and principal stresses, and export results to CSV.</p>
+        <span class="open">Open calculator →</span>
+      </a>
+      <a class="tool violet" href="XRD_Calculator.html">
+        <span class="badge">Characterisation</span>
+        <h2>XRD Crystal Structure Solver</h2>
+        <p>Estimate a cubic lattice constant from ordered diffraction peaks using Bragg’s law.</p>
+        <span class="open">Open calculator →</span>
+      </a>
+    </section>
+    <footer>MIT licensed · Use independently verified inputs and assumptions for engineering decisions.</footer>
+  </main>
+</body>
+</html>
