@@ -18,20 +18,12 @@ single self-contained page — no build step, no shared code between them.
 - No external dependencies — do not introduce a framework or package.json
   for what is currently plain HTML/CSS/JS.
 
-## Validation
-
-- Open the file directly in a browser and check the calculation against a
-  known reference case after any formula change.
-
 ## Definition of Done (extends the global default)
 
-- Gates: none automated; each formula change is checked against a known
-  reference case, with inputs and expected outputs written in the report.
-- Visual/device proof: the calculator opened in a browser; screenshot only when
-  layout changed.
-- Merge: PR against `main`, `gh pr merge --squash --delete-branch`.
-- Deploy: none.
-- Live check: n/a.
+- Gates: none automated. Open the file in a browser and check each formula
+  change against a known reference case; report inputs and expected outputs.
+- Proof: calculator opened in a browser; screenshot only if layout changed.
+- Merge: squash, delete branch. No deploy, no live check.
 - User-only steps (report, do not attempt): choosing new reference cases or
   changing an engineering formula's definition.
 
